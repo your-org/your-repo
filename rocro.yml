@@ -1,6 +1,8 @@
 inspecode:
   tasks:
-    - name: build-example
+    - name: generate-doxygen
       type: docker-build
-      dockerfile: ./your-Dockerfile
-
+      dockerfile: Dockerfile
+      artifacts:
+        - from: doxygen
+          path: /output

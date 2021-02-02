@@ -1,0 +1,6 @@
+inspecode:
+  tasks:
+    - name: build-example
+      type: docker-build
+      dockerfile: ./your-Dockerfile
+

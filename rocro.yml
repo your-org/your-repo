@@ -1,0 +1,8 @@
+inspecode:
+  tasks:
+    - name: shell-example
+      type: shell
+      commands:
+        - sudo apt-get update && sudo apt-get install -y wget
+        - wget -h
+

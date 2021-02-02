@@ -1,0 +1,72 @@
+{
+    "version": "2.1.0",
+    "$schema": "https://raw.githubusercontent.com/oasis-tcs/sarif-spec/master/Schemata/sarif-schema-2.1.0.json",
+    "runs": [{
+        "tool": {
+            "driver": {
+                "name": "misspell",
+                "fullName": "misspell",
+                "rules": [{
+                    "id": "miss-spelling",
+                    "shortDescription": {
+                        "text": "miss spelling"
+                    },
+                    "properties": {
+                        "category": "misspelled"
+                    }
+                }]
+            }
+        },
+        "results": [
+            {
+                "level": "warning",
+                "message": {
+                    "text": "\"langauge\" a misspelling of \"language\""
+                },
+                "locations": [
+                    {
+                        "physicalLocation": {
+                            "artifactLocation": {
+                                "uriBaseId": "REPOROOT",
+                                "uri": "./example.c"
+                            },
+                            "region": {
+                                "startLine": 1,
+                                "startColumn": 2,
+                                "endLine": 2,
+                                "endColumn": 3
+                            }
+                        }
+                    }
+                ],
+                "ruleId": "miss-spelling",
+                "ruleIndex": 0
+            },
+            {
+                "level": "note",
+                "rank": 10,
+                "message": {
+                    "text": "\"zeebra\" a misspelling of \"zebra\""
+                },
+                "locations": [
+                    {
+                        "physicalLocation": {
+                            "artifactLocation": {
+                                "uriBaseId": "REPOROOT",
+                                "uri": "./example.c",
+                                "index": 1
+                            },
+                            "region": {
+                                "startLine": 3,
+                                "endLine": 3
+                            }
+                        }
+                    }
+                ],
+                "ruleId": "miss-spelling",
+                "ruleIndex": 1
+            }
+        ]
+    }]
+}
+

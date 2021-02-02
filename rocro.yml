@@ -1,8 +1,10 @@
 inspecode:
   tasks:
-    - name: shell-example
+    - name: generate-doxygen
       type: shell
       commands:
-        - sudo apt-get update && sudo apt-get install -y wget
-        - wget -h
+        - sudo apt-get update && sudo apt-get install -y doxygen graphviz
+        - ./scripts/generate-doxygen.sh
+      artifacts:
+        - path: /tmp/output
 
